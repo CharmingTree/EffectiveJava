@@ -3,7 +3,7 @@ package Interface;
 import java.util.Map;
 import java.util.Objects;
 
-/* °ñ°İ ±¸Çö Å¬·¡½º */
+/* Â°Ã±Â°Ã Â±Â¸Ã‡Ã¶ Ã…Â¬Â·Â¡Â½Âº */
 public abstract class AbstractMapEntry<K,V> implements Map.Entry<K, V>
 {
 	@Override

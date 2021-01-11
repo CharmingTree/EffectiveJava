@@ -7,20 +7,20 @@ import java.util.List;
 public class Raw 
 {
 	/* ========================================================
-	 * Row TypeÀ» »ç¿ëÇÏÁö ¸»ÀÚ. 
-	 * ÀÚ¹Ù¿¡ Á¦³×¸¯ Å¸ÀÔÀÌ ´Ê°Ô µµÀÔµÇ¾ú±â ¶§¹®¿¡  È£È¯¼º ¹®Á¦°¡ ÀÖ¾î¼­ ¾îÂ¿ ¼ö ¾øÀÌ Çã¿ëµÇ±ä ÇÏÁö¸¸
-	 * ÀáÀçÀû ¿À·ù°¡ ¹ß»ıÇÒ ¼ö ÀÖ±â ¶§¹®¿¡ »ç¿ëÇÏÁö ¾Ê´Â°Ô ÃÖ¼±ÀÌ´Ù.
+	 * Row Typeì„ ì‚¬ìš©í•˜ì§€ ë§ì. 
+	 * ìë°”ì— ì œë„¤ë¦­ íƒ€ì…ì´ ëŠ¦ê²Œ ë„ì…ë˜ì—ˆê¸° ë•Œë¬¸ì—  í˜¸í™˜ì„± ë¬¸ì œê°€ ìˆì–´ì„œ ì–´ì©” ìˆ˜ ì—†ì´ í—ˆìš©ë˜ê¸´ í•˜ì§€ë§Œ
+	 * ì ì¬ì  ì˜¤ë¥˜ê°€ ë°œìƒí•  ìˆ˜ ìˆê¸° ë•Œë¬¸ì— ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ê²Œ ìµœì„ ì´ë‹¤.
 	 * ======================================================== */
 	public static <E> void main(String[] args)
 	{
-		/* RowType : Å¸ÀÔÀÌ ÁöÁ¤ µÇÁö ¾ÊÀº */
+		/* RowType : íƒ€ì…ì´ ì§€ì • ë˜ì§€ ì•Šì€ */
 		Collection lowType = new ArrayList<String>();
-		lowType.add(10); // Å¸ÀÔ ÁöÁ¤À» ÇØÁÖÁö ¾Ê¾Æ¼­ StringÀÌ ¾Æ´Ñ ¿ä¼Ò¸¦ »ğÀÔÇØµµ ÄÄÆÄÀÏ ¿À·ù¿¡¼­ ÀâÈ÷Áö ¾Ê´Â´Ù. 
-						 // ¸ğµç ¿À·ù´Â µÇµµ·Ï ÄÄÆÄÀÏ ½Ã°£¿¡ ÀâÇô¾ß ÇÑ´Ù. 
+		lowType.add(10); // íƒ€ì… ì§€ì •ì„ í•´ì£¼ì§€ ì•Šì•„ì„œ Stringì´ ì•„ë‹Œ ìš”ì†Œë¥¼ ì‚½ì…í•´ë„ ì»´íŒŒì¼ ì˜¤ë¥˜ì—ì„œ ì¡íˆì§€ ì•ŠëŠ”ë‹¤. 
+						 // ëª¨ë“  ì˜¤ë¥˜ëŠ” ë˜ë„ë¡ ì»´íŒŒì¼ ì‹œê°„ì— ì¡í˜€ì•¼ í•œë‹¤. 
 		
-		/* prameterized Type : Å¸ÀÔÀÌ ÁöÁ¤µÊ*/
+		/* prameterized Type : íƒ€ì…ì´ ì§€ì •ë¨*/
 		List<String> paramterType = new ArrayList<>();
-		//paramterType.add(10); // À§¿Í ´Ù¸£°Ô ±¸¹® ¿À·ù. Áï, ÄÄÆÄÀÏ ¿À·ù ³»¿¡ ÀâÈù´Ù. 
+		//paramterType.add(10); // ìœ„ì™€ ë‹¤ë¥´ê²Œ êµ¬ë¬¸ ì˜¤ë¥˜. ì¦‰, ì»´íŒŒì¼ ì˜¤ë¥˜ ë‚´ì— ì¡íŒë‹¤. 
 		
 		/* Generic Type */
 		List<E> genericType = new ArrayList<E>();
@@ -28,12 +28,12 @@ public class Raw
 		
 		List<String> strs = new ArrayList<>();
 		unSafeAdd(strs, Integer.valueOf(99));
-		//String s = strs.get(0); // ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿À¸·Î Çüº¯È¯ ÄÚµå »ğÀÔ. ( List.get -> element(?) -> cast to String -> add ) ÀÌ·¸°Ô?
+		//String s = strs.get(0); // ì»´íŒŒì¼ëŸ¬ê°€ ìë™ìœ¼ë¡œ í˜•ë³€í™˜ ì½”ë“œ ì‚½ì…. ( List.get -> element(?) -> cast to String -> add ) ì´ë ‡ê²Œ?
 	}
 	
 	private static void unSafeAdd(List list, Object o)
 	{
-		list.add(o); // ÄÄÆÄÀÏ ¿À·ù :: ClassCastException 
+		list.add(o); // ì»´íŒŒì¼ ì˜¤ë¥˜ :: ClassCastException 
 	}
 	
 

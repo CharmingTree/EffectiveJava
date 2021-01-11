@@ -1,16 +1,15 @@
 package Interface;
 
 /*
- * »ó¼ö ÀÎÅÍÆäÀÌ½º¸¦ ¹æÁöÇÏ±â À§ÇØ 'À¯Æ¿¸®Æ¼ Å¬·¡½º' ÇüÅÂ·Î ¸¸µç ¸ğ½À.
+ * ìƒìˆ˜ ì¸í„°í˜ì´ìŠ¤ë¥¼ ë°©ì§€í•˜ê¸° ìœ„í•´ 'ìœ í‹¸ë¦¬í‹° í´ë˜ìŠ¤' í˜•íƒœë¡œ ë§Œë“  ëª¨ìŠµ.
  * */
 public class PhysicalConstantsClass {
 	
-	private PhysicalConstantsClass() {} // ÀÎ½ºÅÏ½ºÈ­ ¹æÁö
+	private PhysicalConstantsClass() {} // ì¸ìŠ¤í„´ìŠ¤í™” ë°©ì§€
 	
 	public static final double AVOGADROS_NUMBERS = 6.022_140_857e23;
 	
 	public static final double BOLTZMANN_CONSTANT = 1.380_648_52e-23;
 	
 	public static final double ELECTRON_MASS = 9.109_383_56e-31;
-	
 }

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-// ÄÚµå 20-1 °ñ°İ ±¸ÇöÀ» »ç¿ëÇØ ¿Ï¼ºÇÑ ±¸Ã¼ Å¬·¡½º (133Page)
+// ì½”ë“œ 20-1 ê³¨ê²© êµ¬í˜„ì„ ì‚¬ìš©í•´ ì™„ì„±í•œ êµ¬ì²´ í´ë˜ìŠ¤ (133Page)
 public class IntArrays {
 
 	static List<Integer> intArrayAsList(int[] a) {

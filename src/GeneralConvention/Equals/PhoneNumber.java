@@ -1,16 +1,16 @@
 package GeneralConvention.Equals;
 
 import java.util.*;
-// ÀüÇüÀûÀÎ equals ¸Ş¼­µå ¿¹
+//ì „í˜•ì ì¸ equals ë©”ì„œë“œ ì˜ˆ
 public final class PhoneNumber 
 {
 	private final short areaCode, prefix, lineNum;
 	
 	public PhoneNumber(int areaCode, int prefix, int lineNum)
 	{
-		this.areaCode = rangeCheck(areaCode, 999, "Áö¿ªÄÚµå");
-		this.prefix = rangeCheck(prefix, 999, "ÇÁ¸®ÇÈ½º");
-		this.lineNum = rangeCheck(lineNum, 9999, "°¡ÀÔÀÚ ¹øÈ£");
+		this.areaCode = rangeCheck(areaCode, 999, "ì§€ì—­ì½”ë“œ");
+		this.prefix = rangeCheck(prefix, 999, "í”„ë¦¬í”½ìŠ¤");
+		this.lineNum = rangeCheck(lineNum, 9999, "ê°€ì…ì ë²ˆí˜¸");
 	}
 	
 	private static short rangeCheck(int val, int max, String arg)
@@ -22,20 +22,20 @@ public final class PhoneNumber
 	
 	@Override
 	public boolean equals(Object o) {
-		/* 1. ÀÚ±â ÀÚ½Å ÂüÁ¶ÀÎÁö °Ë»ç ÇÑ´Ù. */
+		/* 1. ìê¸° ìì‹  ì°¸ì¡°ì¸ì§€ ê²€ì‚¬ í•œë‹¤. */
 		if (o == this)
 			return true;
-		/* 2. ºñ±³ ´ë»óÀÌ ¿Ã¹Ù¸¥ Å¸ÀÔÀÎÁö °Ë»ç ÇÑ´Ù. */
+		/* 2. ë¹„êµ ëŒ€ìƒì´ ì˜¬ë°”ë¥¸ íƒ€ì…ì¸ì§€ ê²€ì‚¬ í•œë‹¤. */
 		if (!(o instanceof PhoneNumber))
 			return false;
 		PhoneNumber pn = (PhoneNumber)o;
 		
-		/* 3. 'ÇÙ½É'ÇÊµåµéÀÌ °°ÀºÁö ºñ±³ */
+		/* 3. 'í•µì‹¬'í•„ë“œë“¤ì´ ê°™ì€ì§€ ë¹„êµ */
 		return pn.lineNum == lineNum && pn.prefix == prefix
 				&& pn.areaCode == areaCode;
 	}
 	
-	/* ÀüÇüÀûÀÎ hashCode */
+	/* ì „í˜•ì ì¸ hashCode */
 //	@Override
 //	public int hashCode() {
 //		int result = Short.hashCode(areaCode);
@@ -45,9 +45,9 @@ public final class PhoneNumber
 //	}
 	
 	
-	private int hashCode; // ÀÚµ¿À¸·Î 0À¸·Î ÃÊ±âÈ­µÊ.
+	private int hashCode; // ìë™ìœ¼ë¡œ 0ìœ¼ë¡œ ì´ˆê¸°í™”ë¨.
 	
-	/* Áö¿¬ ÃÊ±âÈ­ ±â´É */
+	/* ì§€ì—° ì´ˆê¸°í™” ê¸°ëŠ¥ */
 	@Override
 	public int hashCode() {
 		int result = hashCode;
@@ -64,7 +64,7 @@ public final class PhoneNumber
 	public static void main(String[] args)
 	{
 		Map<PhoneNumber, String> m = new HashMap<>();
-		m.put(new PhoneNumber(707, 867, 5309), "Á¦´Ï");
+		m.put(new PhoneNumber(707, 867, 5309), "ì œë‹ˆW");
 		System.out.println(m.get(new PhoneNumber(707, 867, 5309)));
 	}
 }
